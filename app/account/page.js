@@ -1,11 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
-import Navigation from "./components/navigation";
 
 export default function Page() {
   return (
     <div>
-      <h1>Home</h1>
+      <h1>account Page</h1>
     </div>
   );
 }
