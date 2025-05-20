@@ -7,9 +7,9 @@ export default function NavigationUI({ session }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="z-10 text-xl relative">
+    <nav className="relative z-10 text-xl">
       {/* Mobile button */}
-      <div className="sm:hidden flex justify-center">
+      <div className="flex justify-center sm:hidden">
         <button
           className="p-2"
           onClick={() => setMenuOpen((prev) => !prev)}
@@ -24,7 +24,7 @@ export default function NavigationUI({ session }) {
       </div>
 
       {/* Desktop links */}
-      <ul className="hidden sm:flex sm:flex-row sm:items-center gap-6 sm:gap-16 ">
+      <ul className="hidden gap-6 sm:flex sm:flex-row sm:items-center sm:gap-16">
         <NavLinks session={session} />
       </ul>
 

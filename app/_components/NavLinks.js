@@ -3,10 +3,10 @@ import Link from "next/link";
 export default function NavLinks({ session, onClose }) {
   return (
     <>
-      <li className="list-none ">
+      <li className="list-none">
         <Link
           href="/cabins"
-          className="hover:text-accent-400 transition-colors"
+          className="transition-colors hover:text-accent-400"
           onClick={onClose}
         >
           Cabins
@@ -15,7 +15,7 @@ export default function NavLinks({ session, onClose }) {
       <li className="list-none">
         <Link
           href="/about"
-          className="hover:text-accent-400 transition-colors"
+          className="transition-colors hover:text-accent-400"
           onClick={onClose}
         >
           About
@@ -25,11 +25,11 @@ export default function NavLinks({ session, onClose }) {
         {session?.user?.image ? (
           <Link
             href="/account"
-            className="hover:text-accent-400 transition-colors flex items-center gap-4"
+            className="flex items-center gap-4 transition-colors hover:text-accent-400"
             onClick={onClose}
           >
             <img
-              className="hidden sm:flex h-8 rounded-full"
+              className="hidden h-8 rounded-full sm:flex"
               src={session.user.image}
               alt={session.user.name}
               referrerPolicy="no-referrer"
@@ -39,7 +39,7 @@ export default function NavLinks({ session, onClose }) {
         ) : (
           <Link
             href="/account"
-            className="hover:text-accent-400 transition-colors"
+            className="transition-colors hover:text-accent-400"
             onClick={onClose}
           >
             Guest area

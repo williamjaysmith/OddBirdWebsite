@@ -10,7 +10,7 @@ function ReservationList({ bookings }) {
     bookings,
     (curBookings, bookingId) => {
       return curBookings.filter((booking) => booking.id !== bookingId);
-    }
+    },
   );
 
   async function handleDelete(bookingId) {
