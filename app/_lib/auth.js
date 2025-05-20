@@ -1,4 +1,5 @@
 import NextAuth from "next-auth";
+import Credentials from "next-auth/providers/credentials";
 import Google from "next-auth/providers/google";
 import { createGuest, getGuest } from "./data-service";
 
@@ -7,6 +8,27 @@ const authConfig = {
     Google({
       clientId: process.env.AUTH_GOOGLE_ID,
       clientSecret: process.env.AUTH_GOOGLE_SECRET,
+    }),
+    Credentials({
+      name: "Guest",
+      credentials: {},
+      async authorize() {
+        const guestEmail = "guest@example.com";
+
+        let guest = await getGuest(guestEmail);
+        if (!guest) {
+          guest = await createGuest({
+            email: guestEmail,
+            fullName: "Guest User",
+          });
+        }
+
+        return {
+          id: guest.id,
+          email: guest.email,
+          name: guest.fullName,
+        };
+      },
     }),
   ],
   callbacks: {
