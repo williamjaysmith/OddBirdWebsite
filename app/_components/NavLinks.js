@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NavLinks({ session, onClose }) {
   return (
     <>
-      <li className="list-none">
+      <li className="list-none ">
         <Link
           href="/cabins"
           className="hover:text-accent-400 transition-colors"
@@ -29,7 +29,7 @@ export default function NavLinks({ session, onClose }) {
             onClick={onClose}
           >
             <img
-              className="h-8 rounded-full"
+              className="hidden sm:flex h-8 rounded-full"
               src={session.user.image}
               alt={session.user.name}
               referrerPolicy="no-referrer"
@@ -40,7 +40,7 @@ export default function NavLinks({ session, onClose }) {
           <Link
             href="/account"
             className="hover:text-accent-400 transition-colors"
-            // onClick={onClose}
+            onClick={onClose}
           >
             Guest area
           </Link>
