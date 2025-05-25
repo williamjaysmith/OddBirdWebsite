@@ -6,8 +6,8 @@ function CabinCard({ cabin }) {
   const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
 
   return (
-    <div className="flex border border-primary-800">
-      <div className="relative h-full min-w-72">
+    <div className="flex w-full max-w-sm flex-col border border-primary-800">
+      <div className="relative h-40 w-full">
         {/* <div className="relative w-full" style={{ paddingTop: "56.25%" }}> */}
         <Image
           src={image}
