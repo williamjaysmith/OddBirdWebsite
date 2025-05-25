@@ -15,12 +15,12 @@ export default function Page() {
       />
 
       <div className="relative text-center">
-        <h1 className="mb-10 text-8xl font-normal tracking-tight text-primary-50">
+        <h1 className="mb-10 text-4xl font-normal tracking-tight text-primary-50 sm:text-8xl">
           Welcome to paradise.
         </h1>
         <Link
           href="/cabins"
-          className="bg-accent-500 px-8 py-6 text-lg font-semibold text-primary-800 transition-all hover:bg-accent-600"
+          className="text-md whitespace-nowrap bg-accent-500 px-6 py-4 font-semibold text-primary-800 transition-all hover:bg-accent-600 sm:px-8 sm:py-6 sm:text-lg"
         >
           Explore luxury cabins
         </Link>

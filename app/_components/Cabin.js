@@ -8,7 +8,7 @@ function Cabin({ cabin }) {
 
   return (
     <div className="mb-24 flex flex-col-reverse justify-between gap-10 border border-primary-800 px-10 py-3 lg:flex-row">
-      <div className="relative aspect-[16/9] w-full lg:-translate-x-3 lg:scale-[1.15]">
+      <div className="relative aspect-[16/9] w-full lg:-translate-x-5 lg:scale-[1.15]">
         <Image
           src={image}
           fill
@@ -18,7 +18,7 @@ function Cabin({ cabin }) {
       </div>
 
       <div>
-        <h3 className="mb-5 w-[150%] p-6 pb-1 text-7xl font-black text-accent-100">
+        <h3 className="mb-5 w-full p-6 pb-1 text-center text-7xl font-black text-accent-100">
           Cabin {name}
         </h3>
 

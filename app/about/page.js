@@ -14,9 +14,9 @@ export default async function Page() {
 
   return (
     <div className="flex flex-col gap-32 text-lg">
-      <div className="flex flex-col md:flex-row gap-12 items-start">
-        <div className="md:w-3/5">
-          <h1 className="text-4xl mb-10 text-accent-400 font-medium">
+      <div className="flex flex-col items-start gap-12 lg:flex-row">
+        <div className="lg:w-3/5">
+          <h1 className="mb-10 text-4xl font-medium text-accent-400">
             Welcome to The Wild Oasis
           </h1>
 
@@ -43,31 +43,31 @@ export default async function Page() {
           </div>
         </div>
 
-        <div className="md:w-2/5">
+        <div className="lg:w-2/5">
           <Image
             src={image1}
             alt="Family sitting around a fire pit in front of cabin"
             placeholder="blur"
             quality={80}
-            className="w-full h-auto object-cover rounded"
+            className="h-auto w-full rounded object-cover"
           />
         </div>
       </div>
 
-      <div className="flex flex-col-reverse md:flex-row gap-12 items-start">
+      <div className="flex flex-col-reverse items-start gap-12 lg:flex-row">
         {/* <div className="relative md:w-2/5 aspect-square"> */}
-        <div className="md:w-2/5">
+        <div className="lg:w-2/5">
           <Image
             src={image2}
             alt="Family sitting around a fire pit in front of cabin"
             placeholder="blur"
             quality={80}
-            className="w-full h-auto object-cover rounded"
+            className="h-auto w-full rounded object-cover"
           />
         </div>
 
-        <div className="md:w-3/5">
-          <h1 className="text-4xl mb-10 text-accent-400 font-medium">
+        <div className="lg:w-3/5">
+          <h1 className="mb-10 text-4xl font-medium text-accent-400">
             Managed by our family since 1962
           </h1>
 
@@ -90,7 +90,7 @@ export default async function Page() {
             <div>
               <a
                 href="/cabins"
-                className="inline-block mt-4 bg-accent-500 px-8 py-5 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
+                className="mt-4 inline-block bg-accent-500 px-8 py-5 text-lg font-semibold text-primary-800 transition-all hover:bg-accent-600"
               >
                 Explore our luxury cabins
               </a>
