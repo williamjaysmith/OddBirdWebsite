@@ -49,11 +49,11 @@ function DateSelector({ settings, cabin, bookedDates }) {
           isPast(curDate) ||
           bookedDates.some((date) => isSameDay(date, curDate))
         }
-        classNames={{
-          root: "max-w-xs",
-          months: "flex flex-row gap-4  justify-center", // This controls the calendar content
-          month: "", // Each individual month container
-        }}
+        // classNames={{
+        //   root: "max-w-xs",
+        //   months: "flex flex-row gap-4  justify-center", // This controls the calendar content
+        //   month: "", // Each individual month container
+        // }}
       />
 
       <div className="flex flex-wrap items-center justify-center gap-2 bg-accent-500 px-8 py-2 text-primary-800">
